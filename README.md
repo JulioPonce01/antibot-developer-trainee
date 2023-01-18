@@ -9,7 +9,7 @@ ORDER BY COUNT(tbl_votes.PostId) DESC
 ;
 ```
 
-```SPARK
+```SCALA
 
  val votesPostsJoinDf = votesDf.as("Votes")
         .join(postsDfClean.as("Posts"), votesPostsJoinCondition, "inner")
